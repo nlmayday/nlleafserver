@@ -2,8 +2,9 @@ package conf
 
 import (
 	"encoding/json"
-	"github.com/name5566/leaf/log"
 	"io/ioutil"
+
+	"github.com/nlmayday/nlleaf/log"
 )
 
 var Server struct {

@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/name5566/leaf"
-	lconf "github.com/name5566/leaf/conf"
 	"server/conf"
 	"server/game"
 	"server/gate"
 	"server/login"
+
+	nlleaf "github.com/nlmayday/nlleaf"
+	lconf "github.com/nlmayday/nlleaf/conf"
 )
 
 func main() {
@@ -16,7 +17,7 @@ func main() {
 	lconf.ConsolePort = conf.Server.ConsolePort
 	lconf.ProfilePath = conf.Server.ProfilePath
 
-	leaf.Run(
+	nlleaf.Run(
 		game.Module,
 		gate.Module,
 		login.Module,

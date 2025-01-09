@@ -1,9 +1,10 @@
 package gamedata
 
 import (
-	"github.com/name5566/leaf/log"
-	"github.com/name5566/leaf/recordfile"
 	"reflect"
+
+	"github.com/nlmayday/nlleaf/log"
+	"github.com/nlmayday/nlleaf/recordfile"
 )
 
 func readRf(st interface{}) *recordfile.RecordFile {

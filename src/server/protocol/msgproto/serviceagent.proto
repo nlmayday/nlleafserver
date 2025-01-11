@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package msgproto;
+
+option go_package = "src/server/msgproto";
+
+message ServerRegister {
+    string addr  = 1; // 自己所在的服务器IP:PROT
+    string tag = 2; // 服务器标识
+    int32 id = 3; // 唯一ID
+}
+
+message CommonMessage {
+    uint32 gid = 1; // 消息 ID
+    uint32 sid = 2; // 子消息 
+    uint64 uid = 3 ; // 用户 ID
+    string body = 4; // jsoni string 游戏协议内容
+}
+
+// 心跳
+message HeartbeatMessage {
+    uint64  times = 1;
+}
+message JoinMessage {
+    uint64 uid = 1;
+}
+message LeaveMessage {
+    uint64 uid = 1;
+}
+
+
+service Serviceagent{
+    rpc Register (ServerRegister) returns (ServerRegister);
+    rpc Channel (stream CommonMessage) returns (stream CommonMessage);
+    // 加入
+    rpc Join(JoinMessage) returns (JoinMessage);
+    // 离开
+    rpc Leave(LeaveMessage) returns (LeaveMessage);
+    // 重入
+    rpc ReConnect(JoinMessage) returns (JoinMessage);
+    // 心跳
+    rpc Heartbeat(HeartbeatMessage) returns (HeartbeatMessage);
+}
+
+/*
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative msgproto/serviceagent.proto
+*/

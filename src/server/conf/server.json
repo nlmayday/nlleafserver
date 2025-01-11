@@ -2,5 +2,31 @@
 	"LogLevel": "debug",
 	"LogPath": "",
 	"TCPAddr": "127.0.0.1:3563",
-	"MaxConnNum": 20000
+	"MaxConnNum": 20000,
+	"mysql" : {
+		"prefix": "",
+		"port": "3306",
+		"config": "charset=utf8mb4&parseTime=True&loc=Local",
+		"db-name": "plggame",
+		"username": "root",
+		"password": "Aa123456",
+		"path": "localhost",
+		"engine": "",
+		"log-mode": "info",
+		"max-idle-conns": 10,
+		"max-open-conns": 100,
+		"singular": false,
+		"log-zap": true
+	},
+	"zap": {
+		"level": "debug",
+		"prefix": "[game-center]",
+		"format": "console",
+		"director": "log",
+		"encode-level": "LowercaseColorLevelEncoder",
+		"stacktrace-key": "stacktrace",
+		"max-age": 0,
+		"show-line": true,
+		"log-in-console": true
+	}
 }

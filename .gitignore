@@ -1,4 +1,3 @@
 src/server/server.exe
 src/server/go.mod
 src/server/go.sum
-src/server/log

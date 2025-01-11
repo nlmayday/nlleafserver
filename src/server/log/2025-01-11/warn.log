@@ -1,5 +1,0 @@
-[game-center]2025/01/11 - 18:50:13.419	[33mwarn[0m	D:/code/nlleafserver/src/server/game/internal/game_servers.go:43	重连，断开老的连接	{"addr": "localhost:50001"}
-[game-center]2025/01/11 - 18:50:23.419	[33mwarn[0m	D:/code/nlleafserver/src/server/game/internal/game_servers.go:43	重连，断开老的连接	{"addr": "localhost:50001"}
-[game-center]2025/01/11 - 18:50:33.422	[33mwarn[0m	D:/code/nlleafserver/src/server/game/internal/game_servers.go:43	重连，断开老的连接	{"addr": "localhost:50001"}
-[game-center]2025/01/11 - 18:52:45.143	[33mwarn[0m	D:/code/nlleafserver/src/server/game/internal/game_servers.go:46	重连，断开老的连接	{"addr": "localhost:50001"}
-[game-center]2025/01/11 - 18:57:04.163	[33mwarn[0m	D:/code/nlleafserver/src/server/game/internal/game_servers.go:46	重连，断开老的连接	{"addr": "localhost:50001"}
